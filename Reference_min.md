@@ -3,7 +3,7 @@ Esse material tem todos os comandos já usados durante o curso, além da sintaxe
 
 # Base para um código Arduino
 
-```Arduino
+```c
     void setup(){
         // A função setup() é o lugar onde você irá declarar suas variáveis, definir estado de pinos, definir o serial e etc.
     }
@@ -15,7 +15,7 @@ Esse material tem todos os comandos já usados durante o curso, além da sintaxe
 # Serial
 
 ## Print e Begin
-```Arduino
+```c
     void setup(){
         Serial.begin(9600); // Inicia a comunicação serial do arduino com o computador em 9600 bits por segundo ( velocidade recomendada ).
         Serial.print("Hello World"); // Printa uma informação.
@@ -31,7 +31,7 @@ Hello world
 ```
 ---
 ## Println 
-```Arduino
+```c
     void setup(){
         Serial.begin(9600);
         
@@ -50,7 +50,7 @@ world
 ```
 ---
 ## Print(ln) na loop()
-```Arduino
+```c
     void setup(){
         Serial.begin(9600);
     }
@@ -103,7 +103,7 @@ Esses são os valores que podem ser atribuídos para simbolizar ligado ou deslig
 `true`       | `false`                      
 `1`          | `0`                      
                   
-```Arduino
+```c
     void setup(){
         int pino_de_saida = 9;
         pinMode(pino_de_saida,OUTPUT);
@@ -128,7 +128,7 @@ Esses são os valores que podem ser atribuídos para simbolizar ligado ou deslig
 
 ## delay
 A função delay, serve para darmos um delay entra uma linha e outra do nosso código, medido em milisegundos.
-```Arduino
+```c
 void loop(){
     Serial.println("Hello...");
     delay(2000);
@@ -144,7 +144,7 @@ Depois de 2 segundos, ...World
 ---
 # Blink
 Voltando ao blink, após entendermos o funcionamento da pinMode, digitalWrite e delay, vamos juntar tudo que aprendemos e formar esse algoritmo:
-```Arduino
+```c
     void setup(){
         Serial.begin(9600);
         int ledPin = 4;
