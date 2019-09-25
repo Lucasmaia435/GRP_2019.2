@@ -54,7 +54,11 @@
 * Arduino intermediário
 
     1. Módulos
-    1. Sensores
-    1. Atuadores
+    1. Sensores digitais
+    1. Atuadores digitais/analógicos
+> Quinta aula
+* Arduino intermediário (pt 2)
+    1. Sensores analógicos.
+    1. Atuadores digitais/analógicos.
     1. Projeto ( a definir ) 
 

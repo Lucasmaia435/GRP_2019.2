@@ -95,7 +95,7 @@ Nesse exemplo nós damos um `push` para que os arquivos que estão no master ( g
 O comando `pull` é usado para "puxar" os arquivos que estão no repositório remoto para o repositório local, ou seja, caso você tenha feito a alteração a partir de outro maneira, e necessita das modificações no seu repositório local, faça:
 
 ```console
-git pull 
+git pull origin master
 ```
 
 ### Git clone
@@ -106,4 +106,4 @@ Caso seja necessário fazer uma cópia de um repositório remoto, use o `git clo
 git clone https://github.com/usuario/exemplo.git
 ```
 
-Com isso o seu computdor irá gerar uma nova pasta com todos os arquivos do repositório que você clonou.
+Com isso o seu computador irá gerar uma nova pasta com todos os arquivos do repositório que você clonou.
