@@ -23,13 +23,39 @@ long CM_ultrassonic(int trigger, int echo){ // Trigger = Output , Echo = Input
   return val;
   
 }
+  int verde = 6;
+  int azul = 5;
+  int vermelha = 4;
 void setup() {
+  pinMode(10,OUTPUT);
+  pinMode(verde,OUTPUT);
+  pinMode(azul,OUTPUT);
+  pinMode(vermelha,OUTPUT);
+  
   Serial.begin(9600);
 }
 
 void loop() {
-  Serial.print("ULTRASSONIC: "); // TRIGGER = 13 , ECHO = 12
-  Serial.print(CM_ultrassonic(13,12));
-  Serial.println("cm");
-  delay(500);
+  int trigger = 13;
+  int echo = 12;
+  int dist =  CM_ultrassonic(trigger,echo);
+  if(dist < 10){
+    digitalWrite(verde,HIGH);
+    digitalWrite(azul,LOW);
+    digitalWrite(vermelha,LOW); 
+    digitalWrite(10,HIGH);
+    delay(100);
+    digitalWrite(10,LOW);    
+  }else if( dist >= 10  && dist < 20){
+    digitalWrite(verde,LOW);
+    digitalWrite(azul,HIGH);
+    digitalWrite(vermelha,LOW);
+    digitalWrite(10,HIGH);
+    delay(100);
+    digitalWrite(10,LOW);
+  }else if(dist >= 20){
+    digitalWrite(verde,LOW);
+    digitalWrite(azul,LOW);
+    digitalWrite(vermelha,HIGH);
+  }
 }
